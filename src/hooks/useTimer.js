@@ -36,5 +36,7 @@ export default ({ startTime, endTime, step, frequency }) => {
 		if (time >= endTime.valueOf()) stop()
 	}, [time, endTime.valueOf()])
 
-	return { time: new Date(time), play, stop }
+	const updateTime = time => setTime(time.valueOf())
+
+	return { time: new Date(time), play, stop, updateTime, isPlaying, startTime, endTime }
 }
