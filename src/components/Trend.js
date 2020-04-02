@@ -85,8 +85,12 @@ export default ({ data, time, startTime, endTime, updateTime }) => {
 	/** Update time when click on svg */
 	const svgRef = useRef()
 	const handlePlotClick = evt => {
+		/** Get the svg's left position on the page */
 		const { left } = svgRef.current.getBoundingClientRect()
+		/** Get the relative click position by subtracting the svg's left position and yAxisWidth from the click
+		 * position */
 		const clickX = evt.clientX - left - yAxisWidth
+		/** Pass the relative click position through the xScale invert function to get the appropriate date */
 		updateTime(xScale.invert(clickX >= 0 ? clickX : 0))
 	}
 
