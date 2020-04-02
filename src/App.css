@@ -1,3 +1,43 @@
 .App {
+	margin: auto;
 	padding-top: 50px;
+	width: 800px;
+}
+
+.trend__base-area {
+	fill: #f7d5d0;
+	fill-opacity: 0.4;
+}
+
+.trend__base-line {
+	fill: none;
+	stroke: #f7d5d0;
+	stroke-width: 1;
+}
+
+.trend__area {
+	fill: #f7d5d0;
+}
+
+.trend__line {
+	fill: none;
+	stroke: #e6532e;
+	stroke-width: 2;
+}
+
+.trend__axis .domain {
+	display: none;
+}
+
+.trend__axis .tick text {
+	color: #586f7a;
+}
+
+.trend__x-axis .tick:last-of-type text {
+	text-anchor: end;
+}
+
+.trend__y-axis line {
+	stroke-dasharray: 3, 3;
+	stroke: #d3dfe6;
 }
